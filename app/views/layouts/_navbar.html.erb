@@ -1,0 +1,10 @@
+<% if logged_in? %>
+<a>ログインユーザ:<%= current_user.name %></a>
+<a class="dropdown-item"><%= link_to 'Logout', logout_path, method: :delete %></a>
+        <% else %>
+          <a><%= link_to 'Home', root_path, class: 'nav-link' %></a>
+          <a><%= link_to 'Signup', signup_path, class: 'nav-link' %></a>
+          <a><%= link_to 'Login', login_path, class: 'nav-link' %></a>
+        <% end %>
+      </ul>
+    </div>
